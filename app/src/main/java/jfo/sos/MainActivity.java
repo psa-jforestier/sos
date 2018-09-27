@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
         // get your ToggleButton
         final ToggleButton b = (ToggleButton) findViewById(R.id.toggleSOS);
         //Switch myToggleButton = ((Switch) findViewById(R.id.toggleSOS));
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.bip);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sos);
+        mp.setLooping(true);
         // attach an OnClickListener
         b.setOnClickListener(new OnClickListener()
         {
@@ -26,8 +27,14 @@ public class MainActivity extends AppCompatActivity {
             {
                 // your click actions go here
                 if (b.isChecked()) {
+                    mp.setLooping(true);
                     mp.start();
-                    
+
+                }
+                else
+                {
+                    mp.stop();
+                    mp.setLooping(false);
                 }
             }
         });
