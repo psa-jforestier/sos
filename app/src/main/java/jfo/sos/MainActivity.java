@@ -1,5 +1,6 @@
 package jfo.sos;
 
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.*;
@@ -13,28 +14,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        final ConstraintLayout L = (ConstraintLayout) findViewById(R.id.background);
+        L.setBackgroundColor(getResources().getColor(R.color.BGCOLOR));
         // get your ToggleButton
         final ToggleButton b = (ToggleButton) findViewById(R.id.toggleSOS);
         //Switch myToggleButton = ((Switch) findViewById(R.id.toggleSOS));
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.sos);
         mp.setLooping(true);
         // attach an OnClickListener
-        b.setOnClickListener(new OnClickListener()
-        {
+        b.setOnClickListener(new OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 // your click actions go here
                 if (b.isChecked()) {
                     mp.setLooping(true);
                     mp.start();
-
-                }
-                else
-                {
+                    L.setBackgroundColor(getResources().getColor(R.color.FULLWHITE));
+                } else {
                     mp.stop();
                     mp.setLooping(false);
+                    L.setBackgroundColor(getResources().getColor(R.color.BGCOLOR));
                 }
             }
         });
