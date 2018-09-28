@@ -7,7 +7,7 @@ import android.widget.*;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.media.MediaPlayer;
-
+// ... --- ...
 public class MainActivity extends AppCompatActivity {
 
     @Override

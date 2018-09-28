@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>1
+    <integer name="DI">1</integer>
+    <integer name="DA">3</integer>
+    <integer name="IA">1</integer> <!-- space between di and da -->
+    <integer name="SP">3</integer> <!-- space between letter -->
+    <integer name="WO">7</integer> <!-- space between word - 5 to 7 accepted -->
+    <string name="S">...</string>
+    <string name="O">---</string>
+    <string name="SOS">...---...</string>
+    <string name="0">-----</string>
+    <string name="1">.----</string>
+    <string name="2">..---</string>
+    <string name="3">...--</string>
+    <string name="4">....-</string>
+    <string name="5">.....</string>
+    <string name="6">-....</string>
+    <string name="7">--...</string>
+    <string name="8">---..</string>
+    <string name="9">----.</string>
+</resources>
